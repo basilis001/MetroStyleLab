@@ -1,0 +1,247 @@
+/* temps */
+/* lettertypes */
+@font-face {
+  font-family: baddies;
+  src: url(../fonts/dogicabold.ttf);
+}
+@font-face {
+  font-family: bunda;
+  src: url(../fonts/BuenosAires_Variable_Upright_Web_Trial.woff);
+}
+@font-face {
+  font-family: fashun;
+  src: url(../fonts/ubuntu.ttf);
+}
+/* variabelen */
+:root {
+  --obc: rgb(255, 252, 232);
+  --cbc: #ffebf5;
+
+  --hoofd: rgb(255, 0, 136);
+  --accent: chartreuse;
+  --acccent: #8cffe2;
+  --black: rgb(17, 14, 14);
+  --white: rgb(246, 246, 246);
+  --nav: linear-gradient(
+    rgba(255, 11, 113, 1),
+    rgba(255, 55, 138, 0.924),
+    rgba(255, 86, 157, 0.89),
+    rgba(168, 5, 73, 0.52),
+    rgba(22, 22, 22, 0.849),
+    rgb(26, 26, 26),
+    rgb(26, 26, 26),
+    rgb(0, 0, 0)
+  );
+
+  --gradient: linear-gradient(
+    rgba(255, 169, 209, 0.048),
+    rgba(255, 169, 209, 0.137),
+    rgba(255, 169, 209, 0.137),
+    rgba(255, 141, 202, 0.267),
+    rgba(255, 63, 143, 0.486),
+    rgba(255, 44, 132, 0.705)
+  );
+  --border: 0.15em solid chartreuse;
+  --line: 0.155em;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/*  H E A D E R */
+
+/* intro elements */
+main {
+  height: 125vh;
+  background-image: url(/img/0021SR.jpeg), url(/img/0028SR.jpeg),
+    url(/img/0035SR.jpg);
+  background-position: left top, center top, right top;
+  background-repeat: repeat-y;
+  background-size: 33.33%;
+  background-attachment: fixed;
+  border: 0.125em solid chartreuse;
+}
+
+.IntroSwipper {
+  height: 98%;
+  position: relative;
+  background-image: var(--gradient);
+  line-height: 2;
+}
+
+.tittleSwipe {
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  position: sticky;
+  align-items: left;
+
+  top: 5em;
+  height: 85vh;
+  padding: 6rem 0 0 6rem;
+
+  border-top: solid 2px var(--obc)
+}
+
+.tittleSwipe span:first-of-type {
+  color: var(--hoofd);
+  font-size: 3.5rem;
+  letter-spacing: 0.5em;
+}
+
+.tittleSwipe span:nth-of-type(2) {
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+}
+
+/* STYLES */
+body,
+html {
+  margin: 0;
+}
+
+img {
+  max-width: 33vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: bunda;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.628rem;
+  line-height: 1.8;
+}
+
+a:hover :not(nav:first-of-type) {
+  border: 0.15em solid chartreuse;
+  background-color: var(--cbc);
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 0.628rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.8;
+  text-align: left;
+}
+
+nav p {
+  font-size: 1.2em;
+  padding: 0 0 2em 1em;
+  position: absolute;
+  bottom: 12em;
+  color: var(--obc);
+  line-height: 1;
+}
+/* https://stackoverflow.com/questions/56118780/how-to-create-an-horizontal-line-with-dots-over-it */
+nav:first-of-type ul {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  margin-top: 2em;
+  border: 0.15em solid var(--obc);
+}
+
+nav:first-of-type ul li {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  width: 33vw;
+  height: 16em;
+
+  position: relative;
+}
+
+nav:first-of-type ul li a {
+  font-size: 1.5em;
+  padding-top: 2em;
+  bottom: 1em;
+
+  color: var(--obc);
+}
+
+nav:first-of-type ul li::after {
+  position: absolute;
+  content: "";
+  top: -1em;
+  left: 50%;
+  transform: translatex(-50%);
+
+  width: 30px;
+  height: 30px;
+  background-clip: content-box;
+  background-color: var(--hoofd);
+
+  border-radius: 30px;
+  outline: 0.15em solid var(--obc);
+}
+
+nav:first-of-type ul li:hover,
+nav:first-of-type ul li:hover::after {
+  outline: 0.15em solid chartreuse;
+  background-color: var(--hoofd);
+}
+
+nav:first-of-type ul li:hover::after {
+  border-radius: 35px;
+  width: 35px;
+  height: 35px;
+  border: 0.5em solid chartreuse;
+}
+
+/***** FOOTER**/
+footer {
+  background-color: var(--hoofd);
+
+  padding: 0;
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  
+  padding: var(--line);
+  gap: var(--line);
+  margin: 0;
+}
+
+footer ul li {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--obc);
+  margin: 0;
+}
+footer ul li a {
+  margin: 0;
+  font-size: 0.8em;
+  color: var(--black);
+}
+
+footer p {
+  background-color: var(--obc);
+  font-size: 0.8em;
+  color: var(--hoofd);
+  
+}
+
