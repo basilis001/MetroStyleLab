@@ -94,6 +94,7 @@ main h1 {
    position: sticky;
    top: 0;
    border: .08em var(--hoofd) solid;
+   z-index: 3;
 }
 
 
@@ -102,11 +103,11 @@ main h1 {
   grid-column: 1/-1;
   grid-row: 1/2;
 position: sticky;
-  top: 1.5em;
+  top: 0;
   background-color: var(--cbc);
   margin: 0;
   border-top: .08em var(--hoofd) solid;
-  border-bottom: .08em yellow solid;
+
 
   font-weight: 200;
   padding: .5em 1.5em .5em .5em;
@@ -155,7 +156,7 @@ p {
 main nav {
   position: fixed;
   bottom: 0;
-  z-index: 2;}
+  z-index: 4;}
 
 main nav:first-of-type ul {
   display: flex;
@@ -241,48 +242,46 @@ header {
   background-repeat: repeat-y;
   background-size: 33.33%;
   background-attachment: fixed;
-  border: var(--border) solid var(--hoofd);
+  border: .025em solid var(--hoofd);
   position: sticky;
   top: 0;
-  padding: .125em 6em .25em 6em;
-
+  
+  padding: .25em 6em;
+  
+z-index: 2;
 }
 
 
-.IntroSwipper {
-  height: 1.5em;
-  position: relative;
-}
 
 header h1 {
   display: flex;
   flex-flow: row nowrap;
-  align-items: left;
-  padding: 0 0 0 2rem;
+ align-items: center;
+  padding: 0 0 0 15rem;
   margin: 0;
-  font-weight: 500;
+  
+
 
 }
 .tittleSwipe span:first-of-type a {
   color: var(--hoofd);
-  
-  
+  font-weight: 350;
 
-  
 }
 .tittleSwipe span:first-of-type {
   color: var(--hoofd);
   font-size: 0.5em;
   letter-spacing: 2;
-  flex-grow: 2;
+  flex-grow: 3;
 }
 
 .tittleSwipe span:nth-of-type(2) {
-  font-size: 0.25em;
+  font-size: 0.28em;
   font-weight: 500;
   letter-spacing: 5px;
-  flex-grow: 1;
-  color: var(--white);
+  padding: .5em 0;
+  margin: 0;
+  
 }
 
 /*** CARD STYLING***************/
@@ -303,7 +302,7 @@ h3 {
   margin: 0;
   grid-column: 1/4;
   grid-row: 1/2;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 1.5em 1em 1em 0.5em;
 }
  
