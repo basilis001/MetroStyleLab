@@ -2,15 +2,15 @@
 /* lettertypes */
 @font-face {
   font-family: baddies;
-  src: url(/metrostylelab.sunbas/fonts/dogicabold.ttf);
+  src: url(./metrostylelab.sunbas/fonts/dogicabold.ttf);
 }
 @font-face {
   font-family: bunda;
-  src: url(/metrostylelab.sunbas/fonts/BuenosAires_Variable_Upright_Web_Trial.woff);
+  src: url(./metrostylelab.sunbas/fonts/BuenosAires_Variable_Upright_Web_Trial.woff);
 }
 @font-face {
   font-family: fashun;
-  src: url(/metrostylelab.sunbas/fonts/ubuntu.ttf);
+  src: url(./metrostylelab.sunbas/fonts/ubuntu.ttf);
 }
 /* variabelen */
 :root {
@@ -230,8 +230,8 @@ nav:first-of-type ul li:hover::after {
 
 header {
   height: max-content;
-  background-image: url(/img/0021SR.jpeg), url(/img/0028SR.jpeg),
-    url(/img/0035SR.jpg);
+  background-image: url(./img/0021SR.jpeg), url(./img/0028SR.jpeg),
+    url(./img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
   background-size: 33.33%;
@@ -532,7 +532,7 @@ input[type="submit"]:last-of-type {
   width: 5rem;
   height: 4rem;
   padding: 2.5rem 0 0;
-  background-image: url(/img/Pasted\ Graphic.png);
+  background-image: url(./img/Pasted\ Graphic.png);
   border: none;
   background-repeat: no-repeat;
   background-color: transparent;

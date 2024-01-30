@@ -54,8 +54,8 @@
 /* intro elements */
 main {
   height: 125vh;
-  background-image: url(/img/0021SR.jpeg), url(/img/0028SR.jpeg),
-    url(/img/0035SR.jpg);
+  background-image: url(./img/0021SR.jpeg), url(./img/0028SR.jpeg),
+    url(./img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
   background-size: 33.33%;
