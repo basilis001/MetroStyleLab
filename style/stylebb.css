@@ -239,7 +239,7 @@ header {
   background-attachment: fixed;
   border: var(--border) solid var(--hoofd);
   position: sticky;
-  top: 0em;
+  top: .01em;
   padding: .125em 6em .25em 6em;
 
 }
