@@ -84,11 +84,12 @@ main {
   border-top: solid 2px var(--obc)
 }
 
-.tittleSwipe span:first-of-type {
+.tittleSwipe span:first-of-type a {
   color: var(--hoofd);
-  font-size: 3.5rem;
+font-size: 2.5rem;
   letter-spacing: 0.5em;
 }
+
 
 .tittleSwipe span:nth-of-type(2) {
   font-size: 0.8em;
