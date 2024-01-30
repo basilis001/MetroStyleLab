@@ -90,7 +90,7 @@ main h1 {
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
   font-size: 1em;
-  color: var(--hoofd);
+  color: yellow;
    position: sticky;
    top: 0;
    border: .08em var(--hoofd) solid;
@@ -100,12 +100,14 @@ main h1 {
 /*subtittle pagina boven*****/
  h2 {
   grid-column: 1/-1;
+  grid-row: 1/2;
 position: sticky;
-  top: 2.5em;
+  top: 1.5em;
   background-color: var(--cbc);
   margin: 0;
   border-top: .08em var(--hoofd) solid;
-  
+  border-bottom: .08em yellow solid;
+
   font-weight: 200;
   padding: .5em 1.5em .5em .5em;
   font-size: 1.2em;
@@ -231,7 +233,7 @@ nav:first-of-type ul li:hover::after {
 
 header {
   height: max-content;
-  background-image: url(./img/0021SR.jpeg), url(img/0028SR.jpeg),
+  background-image: url(\./img/0021SR.jpeg), url(\./img/0028SR.jpeg),
   url(/img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
@@ -255,6 +257,9 @@ header h1 {
   flex-flow: row nowrap;
   align-items: left;
   padding: 0 0 0 1rem;
+  margin: 0;
+  font-weight: 500;
+
 }
 .tittleSwipe span:first-of-type a {
   color: var(--hoofd);
@@ -281,6 +286,7 @@ header h1 {
 /*** CARD STYLING***************/
 .card {
   display: grid;
+  
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 2fr ;
 }
