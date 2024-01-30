@@ -90,7 +90,7 @@ main h1 {
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
   font-size: 1em;
-  color: yellow;
+  color: var(--hoofd);
    position: sticky;
    top: 0;
    border: .08em var(--hoofd) solid;
@@ -110,7 +110,7 @@ position: sticky;
 
   font-weight: 200;
   padding: .5em 1.5em .5em .5em;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 img {
@@ -154,9 +154,9 @@ p {
 /**************** NAVIGATIE*/
 main nav {
   position: fixed;
-
   bottom: 0;
   z-index: 2;}
+
 main nav:first-of-type ul {
   display: flex;
   flex-flow: row nowrap;
@@ -171,18 +171,20 @@ nav:first-of-type ul li {
   align-items: center;
   background-color: var(--obc);
   width: 31vw;
-  border: solid 0.1em var(--hoofd);
+  border: solid 0.025em var(--hoofd);
   position: relative;
 }
 
 nav:first-of-type ul li a {
-  font-size: 1em;
+  font-size: .8em;
   padding-top: 0.5em;
   color: var(--hoofd);
 }
 
 nav:first-of-type ul li:first-child {
   width: 6.75vw;
+  font-size: 1em;
+  
 }
 
 /*BOLLETJES NAV**********
@@ -217,18 +219,18 @@ nav:first-of-type ul li:hover a {
   color: var(--cbc);
 }
 
-nav:first-of-type ul li:hover::after {
-  border: 0.5em solid rgba(255, 22, 158, 0);
-  top: -1.5em;
-}
-
-.active::after {
-  width: 35px;
-  height: 35px;
-  border-radius: 35px;
+nav:first-of-type ul li.active::after {
+  top: -1.2em;
+  left: 50%;
+  transform: translatex(100%);
+  border-radius: 42px;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(188, 22, 138, 0.529);
+  z-index: 1;
+  outline: 0.09em solid var(--hoofd);
   border: 0.6em solid rgba(49, 255, 22, 0.641);
 }
-
 /***HEADER********/
 
 header {
@@ -256,7 +258,7 @@ header h1 {
   display: flex;
   flex-flow: row nowrap;
   align-items: left;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 2rem;
   margin: 0;
   font-weight: 500;
 
