@@ -2,15 +2,15 @@
 /* lettertypes */
 @font-face {
   font-family: baddies;
-  src: url(/metrostylelab.sunbas/fonts/dogicabold.ttf);
+  src: url(./fonts/dogicabold.ttf);
 }
 @font-face {
   font-family: bunda;
-  src: url(/metrostylelab.sunbas/fonts/BuenosAires_Variable_Upright_Web_Trial.woff);
+  src: url(./fonts/BuenosAires_Variable_Upright_Web_Trial.woff);
 }
 @font-face {
   font-family: fashun;
-  src: url(/metrostylelab.sunbas/fonts/ubuntu.ttf);
+  src: url(./fonts/ubuntu.ttf);
 }
 /* variabelen */
 :root {
