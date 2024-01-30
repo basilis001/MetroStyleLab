@@ -52,7 +52,7 @@
 /*  H E A D E R */
 
 /* intro elements */
-main {
+main.start {
   height: 125vh;
   background-image: url(./img/0021SR.jpeg), url(./img/0028SR.jpeg),
     url(./img/0035SR.jpg);
@@ -63,14 +63,14 @@ main {
   border: 0.125em solid chartreuse;
 }
 
-.IntroSwipper {
+main.start .IntroSwipper {
   height: 98%;
   position: relative;
   background-image: var(--gradient);
   line-height: 2;
 }
 
-.tittleSwipe {
+main.start .tittleSwipe {
   color: white;
   display: flex;
   flex-flow: column wrap;
@@ -84,26 +84,25 @@ main {
   border-top: solid 2px var(--obc)
 }
 
-.tittleSwipe span:first-of-type a {
+main.start .tittleSwipe span:first-of-type a {
   color: var(--hoofd);
 font-size: 2.5rem;
   letter-spacing: 0.5em;
 }
 
 
-.tittleSwipe span:nth-of-type(2) {
+main.start .tittleSwipe span:nth-of-type(2) {
   font-size: 0.8em;
   font-weight: 500;
   letter-spacing: 0.5em;
 }
 
-/* STYLES */
-body,
+/* STYLES */ body,
 html {
   margin: 0;
 }
 
-img {
+main.start img {
   max-width: 33vw;
   height: auto;
   margin: 0;
@@ -119,13 +118,13 @@ h6 {
   font-weight: normal;
 }
 
-a {
+main.start a {
   text-decoration: none;
   font-size: 0.628rem;
   line-height: 1.8;
 }
 
-a:hover :not(nav:first-of-type) {
+main.start a:hover :not(nav:first-of-type) {
   border: 0.15em solid chartreuse;
   background-color: var(--cbc);
 }
@@ -134,14 +133,14 @@ li {
   list-style: none;
 }
 
-p {
-  font-size: 0.628rem;
+main.start p {
+  font-size: 0.528rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.8;
   text-align: left;
 }
 
-nav p {
+main.start nav p {
   font-size: 1.2em;
   padding: 0 0 2em 1em;
   position: absolute;
@@ -150,7 +149,7 @@ nav p {
   line-height: 1;
 }
 /* https://stackoverflow.com/questions/56118780/how-to-create-an-horizontal-line-with-dots-over-it */
-nav:first-of-type ul {
+main.start nav:first-of-type ul {
   display: flex;
   flex-flow: row nowrap;
   margin: 0;
@@ -161,7 +160,7 @@ nav:first-of-type ul {
   border: 0.15em solid var(--obc);
 }
 
-nav:first-of-type ul li {
+main.start nav:first-of-type ul li {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -172,7 +171,7 @@ nav:first-of-type ul li {
   position: relative;
 }
 
-nav:first-of-type ul li a {
+main.start nav:first-of-type ul li a {
   font-size: 1.5em;
   padding-top: 2em;
   bottom: 1em;
@@ -180,7 +179,7 @@ nav:first-of-type ul li a {
   color: var(--obc);
 }
 
-nav:first-of-type ul li::after {
+main.start nav:first-of-type ul li::after {
   position: absolute;
   content: "";
   top: -1em;
@@ -196,13 +195,13 @@ nav:first-of-type ul li::after {
   outline: 0.15em solid var(--obc);
 }
 
-nav:first-of-type ul li:hover,
-nav:first-of-type ul li:hover::after {
+main.start nav:first-of-type ul li:hover,
+main.start nav:first-of-type ul li:hover::after {
   outline: 0.15em solid chartreuse;
   background-color: var(--hoofd);
 }
 
-nav:first-of-type ul li:hover::after {
+main.start nav:first-of-type ul li:hover::after {
   border-radius: 35px;
   width: 35px;
   height: 35px;
