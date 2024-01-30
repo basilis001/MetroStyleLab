@@ -233,8 +233,8 @@ nav:first-of-type ul li:hover::after {
 
 header {
   height: max-content;
-  background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(\./img/0028SR.jpeg),
-  url(./img/0035SR.jpg);
+  background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
+  url(/MetroStyleLab/img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
   background-size: 33.33%;
