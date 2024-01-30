@@ -223,7 +223,7 @@ nav:first-of-type ul li:hover::after {
   width: 35px;
   height: 35px;
   border-radius: 35px;
-  border: 0.8em solid rgba(255, 22, 158, 0);
+  border: 0.6em solid rgba(49, 255, 22, 0.641);
 }
 
 /***HEADER********/
@@ -254,7 +254,13 @@ header h1 {
   align-items: left;
   padding: 0 0 0 1rem;
 }
+.tittleSwipe span:first-of-type a {
+  color: var(--hoofd);
+  
+  
 
+  
+}
 .tittleSwipe span:first-of-type {
   color: var(--hoofd);
   font-size: 0.5em;
@@ -327,6 +333,8 @@ article time {
   color: var(--hoofd);
   margin: 0;
 }
+
+.fave a:hover p,
 .about a:last-of-type:hover,
 .card a:last-of-type:hover {
   border-right: solid 0.355em chartreuse;
@@ -341,26 +349,51 @@ article time {
 section ul {
   grid-area: 2/1/-1/-1;
   display: flex;
+  flex-flow: row wrap;
   margin: 0;
   padding: 0;
   background-color: var(--hoofd);
   gap: var(--line);
+  width: 100%;
+  max-width: 100%;
+  
 }
 
 section ul li {
-  display: flex;
-  flex-direction: column;
+ flex: 2 1 23%;
   background-color: var(--cbc);
   flex-grow: 1;
+  width: 100%;
+  padding: 0;
+  
+  
 }
 section ul li img {
-  width: 500px;
- 
+  
+ width: 100%;
+ height: 85%;
 }
 
 section ul li a {
   background-color: var(--cbc);
   flex-grow: 1;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  color: var(--hoofd);
+  
+  
+
+}
+
+section ul li a p {
+  height: 15%;
+  padding: 1em;
+  border-top: var(--hoofd) solid .25em;
+  margin: 0;
+font-size: 1rem;
 
 }
 /******ABOUT
@@ -411,19 +444,21 @@ section {
 
 /***** CONTACT LAY OUT***********
 ************************************/
+.contact h1 { grid-column: 1/2;
+grid-row: 1/-1;
+object-fit: contain;}
 .contact {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area: 2/2/-2/-2;
+  grid-area: 2/2/-1/-1;
 }
 article > *{
   background-color: var(--cbc);
   gap: var(--line);
 }
 
-
 .contact p {
   margin: 0;
-  grid-column: 1/4;
+  grid-column: 2/-1;
   grid-row: 2/3;
   font-size: 1em;
   padding: 6em;
@@ -432,9 +467,9 @@ article > *{
 
 .contact img {
   width: 550px;
-  padding: 2em;
+  padding: 5em 1em;
   grid-row: 2/3;
-  grid-column: 4/5;
+  grid-column: 1/2;
 }
 
 .contact h3:nth-of-type(1) {
@@ -442,23 +477,24 @@ article > *{
   grid-column: 1/3;
   grid-row: 3/4;
   font-size: 1.5em;
-  padding: 5em;
+  padding: 3em;
   margin: 0;
 }
 
 .contact h3:nth-of-type(2) {
   color: black;
-  grid-column: 3/5;
+  grid-column: 3/-1;
   grid-row: 3/4;
-  padding: 0 2em;
+  padding: 3em;
   font-size: 1.5em;
   margin: 0;
+
 }
 
 /******
 CONTACT FORMS**************************/
 .contact form {
-  padding: 2em 5em 2em 2em;
+  padding: 5em;
 }
 .contact form:nth-of-type(2) {
   grid-column: 3/5;
@@ -514,6 +550,7 @@ form:focus {
 
 /*********ANIMATIE****/
 
+
 @keyframes lovelet-ani {
   0% {
     rotate: 0deg;
@@ -561,6 +598,7 @@ input[type="submit"]:last-of-type:hover {
   animation-name: post-animation;
   animation-duration: 1s;
 }
+
 
 /****FOOTER ****/
 footer {
