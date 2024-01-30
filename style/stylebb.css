@@ -89,7 +89,7 @@ main h1 {
   font-weight: 200;
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--hoofd);
    position: sticky;
    top: 0;
@@ -231,7 +231,7 @@ nav:first-of-type ul li:hover::after {
 
 header {
   height: max-content;
-  background-image: url(/img/0021SR.jpeg), url(/img/0028SR.jpeg),
+  background-image: url(./img/0021SR.jpeg), url(./img/0028SR.jpeg),
   url(/img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
