@@ -231,7 +231,7 @@ nav:first-of-type ul li:hover::after {
 
 header {
   height: max-content;
-  background-image: url(/./img/0021SR.jpeg), url("img/0028SR.jpeg"),
+  background-image: url(./img/0021SR.jpeg), url(img/0028SR.jpeg),
   url(/img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
@@ -239,7 +239,7 @@ header {
   background-attachment: fixed;
   border: var(--border) solid var(--hoofd);
   position: sticky;
-  top: .01em;
+  top: 0;
   padding: .125em 6em .25em 6em;
 
 }
