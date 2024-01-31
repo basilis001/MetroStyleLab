@@ -82,16 +82,26 @@ main section {
   padding: 0 0 0 0;
   z-index: 3;
 }
-/*tittle pagina links*****/
+/*tittle pagina *****/
 main h1 {
-  background-color: var(--cbc);
+  background-color: #fffce8;
+background-image: 
+  linear-gradient(
+    
+    rgba(255, 11, 113, 0.908) 1%,
+    rgba(255, 11, 113, 0.592) 2.5%,
+    rgba(255, 44, 132, 0.568)6%,
+    rgba(255, 63, 143, 0.387)15%,
+    rgba(255, 63, 143, 0.39)15%,
+    rgba(255, 141, 202, 0.225)25%
+  );
   margin: 0;
   padding: 0.6em 1.5em 0 0.8em;
   font-weight: 200;
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
   font-size: 1em;
-  color: var(--hoofd);
+  color:var(--obc);
   position: sticky;
   top: 0;
   border: 0.08em var(--hoofd) solid;
@@ -108,8 +118,7 @@ h2 {
   margin: 0;
   border-top: 0.08em var(--hoofd) solid;
   z-index: 2;
-
-  font-weight: 200;
+  font-weight: 240;
   padding: 0.5em 1.5em 0.5em 0.5em;
   font-size: 1em;
 }
@@ -140,15 +149,14 @@ li {
 
 p {
   font-size: 0.428rem;
-
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
   padding: 1em;
 }
-
+/**padding blok onderaan pag ***/
 .padd {
   background-color: var(--cbc);
-  padding: 15em;
+  padding: 20em;
   margin: var(--line) 0;
   grid-column: 1/-1;
 }
@@ -159,7 +167,7 @@ main nav {
   position: fixed;
   bottom: 0;
   z-index: 5;
-  height: 7%;
+  height: 7.5%;
 }
 
 main nav:first-of-type ul {
@@ -175,37 +183,49 @@ nav:first-of-type ul li {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  background-color: var(--obc);
   width: 31vw;
   border: solid 0.08em var(--hoofd);
   position: relative;
   height: 100%;
 }
 nav:first-of-type ul li:not(:first-of-type) {
-  background-color: #fffce872;
-  font-size: 1em;
+  background-color: #fffce8a2;
+  font-size: .9em;
   font-weight: 450;
-  bottom: -1rem;
+  bottom: -1.2rem;
 }
+
 nav:first-of-type ul li a {
   font-size: 0.95em;
-  padding-top: 0.5em;
+  padding-top: 0.55em;
   color: var(--hoofd);
 }
 
+
+
+/** active****/
 nav:first-of-type ul li.active {
   width: 6.75vw;
-
-  height: 120%;
+    animation-name: sizewo;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    transition-timing-function: linear;
+    
+  
+  
+  
 }
 nav:first-of-type ul li.active a {
   color: var(--obc);
-
-  animation-duration: 3s;
   animation-name: colourwo;
-  animation-iteration-count: 1;
-  animation-direction: reverse;
-  animation-timing-function: ease-in colour 1s;
+    animation-duration: 2.5s;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    transition-timing-function: linear;
+    
 }
 
 /*BOLLETJES NAV**********
@@ -222,83 +242,69 @@ nav:first-of-type ul li::after {
   background-clip: content-box;
   background-color: var(--hoofd);
   border-radius: 15px;
-  outline: 0.12em solid var(--obc);
-
+  outline: 0.05em solid var(--obc);
   z-index: 200;
 }
 
 /**HOVER NAV*************/
 nav:first-of-type ul li:hover {
-  border-top: solid 0.2em var(--accent);
-  border-right: solid 0.2em var(--accent);
-  border-left: solid 0.2em var(--accent);
+  border-top: solid 0.15em var(--accent);
+  border-right: solid 0.15em var(--accent);
+  border-left: solid 0.15em var(--accent);
   background-color: var(--hoofd);
   margin-top: -0.5em;
 }
 
 nav:first-of-type ul li:hover a {
-  font-size: 1em;
+  font-size: 1.1em;
   padding-top: 0.5em;
   color: var(--cbc);
 }
+nav:first-of-type ul li.active::after {
+animation-name: slide-twirl;
+animation-duration: 2s;
+animation-fill-mode: backwards;
+animation-direction: reverse;
+animation-iteration-count: 1;
+transition-timing-function:linear;
 
+
+}
 nav:first-of-type ul li.active::after {
   top: -1.2em;
-  left: 60%;
+  left: 45%;
   transform: translatex(100%);
-  border-radius: 42px;
-  width: 42px;
-  height: 42px;
-  background-color: rgba(206, 20, 150, 0.768);
-  z-index: 1;
-  outline: 0.09em solid var(--hoofd);
-  border: 0.6em solid rgba(91, 255, 54, 0.8);
-}
-
-nav:first-of-type ul li:hover::after {
-  position: absolute;
-  content: "";
-  top: -1.5em;
-  left: 50%;
-  transform: translatex(-50%);
-  width: 25px;
-  height: 25px;
-  background-clip: content-box;
-  background-color: rgba(255, 192, 203, 0.428);
-  border-radius: 25px;
-  outline: 0.12em solid var(--accent);
-
-  z-index: 200;
-}
-
-nav:first-of-type ul li.active::after {
-  animation-duration: 2s;
-  animation-name: slide-twirl;
-  animation-iteration-count: 1;
-  animation-direction: reverse;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
   transform: translatex(100%);
-
   background-color: rgba(91, 255, 54, 0.8);
   z-index: 1;
-  outline: 0.1em solid var(--hoofd);
-  border: 0.7em solid rgba(255, 192, 203, 0.555);
+  outline: 0.10em solid var(--hoofd);
+  border: 0.8em solid rgba(255, 192, 203, 0.592);
+
 }
 @keyframes slide-twirl {
   from {
     top: -1.2em;
-    left: 50%;
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
+    
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
   }
-
-  to {
-    top: -0.5em;
-    left: 300%;
+50% {  top: -1.2em;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+left: 80%;
+}
+  to {top: -1.2em;
     width: 15px;
     height: 15px;
     border-radius: 15px;
-    background-color: var(--hoofd);
+    left: 90%;
+
   }
 }
 
@@ -307,10 +313,36 @@ nav:first-of-type ul li.active::after {
     color: var(--obc);
   }
 
-  50% {
+  0% {
+    color: var(--hoofd);
   }
   to {
     color: var(--hoofd);
+  }
+}
+
+@keyframes sizewo {
+  from {
+    
+    border: solid 0.08em var(--hoofd);
+    bottom: 0;
+    
+    
+  }
+50% {  
+  width: 6.75vw;
+  bottom: -1.2rem;
+}
+ 
+  to {
+    width: 21vw;
+    bottom: -1.2rem;
+
+    border: none;
+    
+    
+
+
   }
 }
 /***HEADER********/
@@ -333,7 +365,7 @@ header {
   top: 0;
   justify-content: end;
   padding: 0.25em;
-
+opacity: .8;
   z-index: 4;
 }
 
