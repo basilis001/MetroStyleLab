@@ -63,13 +63,13 @@ main {
   background-color: var(--hoofd);
   display: grid;
   grid-template-columns: 6.75vw 1fr;
-  
-border-right: var(--line) solid var(--hoofd);padding: 0 }
+
+  border-right: var(--line) solid var(--hoofd);
+  padding: 0;
+}
 section:first-of-type article > * {
   background-color: var(--cbc);
 }
-
-
 
 /************ MAIN!!!!! LAY OUT*******/
 main section {
@@ -79,39 +79,38 @@ main section {
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: auto 2fr 2fr;
   margin: 0;
-  padding: 0 0 0 0 ;
+  padding: 0 0 0 0;
   z-index: 3;
 }
 /*tittle pagina links*****/
 main h1 {
   background-color: var(--cbc);
-  margin:  0 ;
-  padding: .6em 1.5em 0 0.8em;
+  margin: 0;
+  padding: 0.6em 1.5em 0 0.8em;
   font-weight: 200;
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
   font-size: 1em;
   color: var(--hoofd);
-   position: sticky;
-   top: 0;
-   border: .08em var(--hoofd) solid;
-   z-index: 4;
+  position: sticky;
+  top: 0;
+  border: 0.08em var(--hoofd) solid;
+  z-index: 4;
 }
 
-
 /*subtittle pagina boven*****/
- h2 {
+h2 {
   grid-column: 1/-1;
   grid-row: 1/2;
-position: sticky;
+  position: sticky;
   top: 0;
   background-color: var(--cbc);
   margin: 0;
-  border-top: .08em var(--hoofd) solid;
-z-index: 2;
+  border-top: 0.08em var(--hoofd) solid;
+  z-index: 2;
 
   font-weight: 200;
-  padding: .5em 1.5em .5em .5em;
+  padding: 0.5em 1.5em 0.5em 0.5em;
   font-size: 1em;
 }
 
@@ -141,7 +140,7 @@ li {
 
 p {
   font-size: 0.428rem;
-  
+
   line-height: 1.8;
   text-align: left;
   padding: 1em;
@@ -150,21 +149,18 @@ p {
 .padd {
   background-color: var(--cbc);
   padding: 15em;
-  margin: var(--line) 0 ;
+  margin: var(--line) 0;
   grid-column: 1/-1;
 }
 
-
-
 /**************** NAVIGATIE*/
-
 
 main nav {
   position: fixed;
   bottom: 0;
   z-index: 5;
-height: 7%;}
-  
+  height: 7%;
+}
 
 main nav:first-of-type ul {
   display: flex;
@@ -172,8 +168,7 @@ main nav:first-of-type ul {
   margin: 0;
   padding: 0;
   z-index: 0;
-height: 100%;
-
+  height: 100%;
 }
 
 nav:first-of-type ul li {
@@ -184,40 +179,33 @@ nav:first-of-type ul li {
   width: 31vw;
   border: solid 0.08em var(--hoofd);
   position: relative;
-height: 100%; 
-
+  height: 100%;
 }
 nav:first-of-type ul li:not(:first-of-type) {
-background-color: #fffce872;
-font-size: 1em;
+  background-color: #fffce872;
+  font-size: 1em;
   font-weight: 450;
-bottom: -1rem;
-
-
+  bottom: -1rem;
 }
 nav:first-of-type ul li a {
-  font-size: .95em;
+  font-size: 0.95em;
   padding-top: 0.5em;
   color: var(--hoofd);
 }
 
-nav:first-of-type ul li.active{
+nav:first-of-type ul li.active {
   width: 6.75vw;
-  
-  
-height: 120%;
-  
- 
+
+  height: 120%;
 }
-nav:first-of-type ul li.active a{
+nav:first-of-type ul li.active a {
   color: var(--obc);
-  
+
   animation-duration: 3s;
   animation-name: colourwo;
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-timing-function: ease-in colour 1s;
- 
 }
 
 /*BOLLETJES NAV**********
@@ -235,7 +223,7 @@ nav:first-of-type ul li::after {
   background-color: var(--hoofd);
   border-radius: 15px;
   outline: 0.12em solid var(--obc);
-  
+
   z-index: 200;
 }
 
@@ -279,7 +267,7 @@ nav:first-of-type ul li:hover::after {
   background-color: rgba(255, 192, 203, 0.428);
   border-radius: 25px;
   outline: 0.12em solid var(--accent);
-  
+
   z-index: 200;
 }
 
@@ -289,19 +277,17 @@ nav:first-of-type ul li.active::after {
   animation-iteration-count: 1;
   animation-direction: reverse;
   transform: translatex(100%);
-  
-  background-color:rgba(91, 255, 54, 0.8);
+
+  background-color: rgba(91, 255, 54, 0.8);
   z-index: 1;
   outline: 0.1em solid var(--hoofd);
-  border: 0.7em solid  rgba(255, 192, 203, 0.555);
+  border: 0.7em solid rgba(255, 192, 203, 0.555);
 }
 @keyframes slide-twirl {
   from {
-  
-    
-  top: -1.2em;
-  left: 50%;
-  width: 45px;
+    top: -1.2em;
+    left: 50%;
+    width: 45px;
     height: 45px;
     border-radius: 45px;
   }
@@ -316,82 +302,69 @@ nav:first-of-type ul li.active::after {
   }
 }
 
-
 @keyframes colourwo {
   from {
-  
-    
-  color: var(--obc);
+    color: var(--obc);
   }
 
   50% {
-    
-    
-  }to {
+  }
+  to {
     color: var(--hoofd);
-    
   }
 }
 /***HEADER********/
 body {
-  background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
-  url(/MetroStyleLab/img/0035SR.jpg);
+  background-image: url(/MetroStyleLab/img/0021SR.jpeg),
+    url(/MetroStyleLab/img/0028SR.jpeg), url(/MetroStyleLab/img/0035SR.jpg);
   background-size: 33.33%;
 }
 header {
   display: flex;
   height: max-content;
-  background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
-  url(/MetroStyleLab/img/0035SR.jpg);
+  background-image: url(/MetroStyleLab/img/0021SR.jpeg),
+    url(/MetroStyleLab/img/0028SR.jpeg), url(/MetroStyleLab/img/0035SR.jpg);
   background-position: left top, center top, right top;
   background-repeat: repeat-y;
   background-size: 33.33%;
   background-attachment: fixed;
-  border: .025em solid var(--hoofd);
+  border: 0.025em solid var(--hoofd);
   position: sticky;
   top: 0;
-  justify-content:end;
-  padding: .25em ;
-  
-z-index: 4;
+  justify-content: end;
+  padding: 0.25em;
+
+  z-index: 4;
 }
-
-
 
 header h1 {
   display: flex;
   flex-flow: row nowrap;
- align-items: center;
+  align-items: center;
   padding: 0 3rem;
   margin: 0;
   min-width: 70vw;
   max-width: 33vw;
 
-justify-content: space-between;
-
+  justify-content: space-between;
 }
 .tittleSwipe span:first-of-type a {
   color: var(--hoofd);
   font-weight: 350;
-
 }
 .tittleSwipe span:first-of-type {
   color: var(--hoofd);
   font-size: 0.5em;
   letter-spacing: 2;
-  
-
 }
 
 .tittleSwipe span:nth-of-type(2) {
-  font-size: 0.30em;
+  font-size: 0.3em;
   font-weight: 500;
   letter-spacing: 5px;
-  
+
   margin: 0;
   color: yellow;
-  
-  
 }
 
 /*** CARD STYLING***************/
@@ -399,7 +372,7 @@ justify-content: space-between;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 2fr ;
+  grid-template-rows: auto 2fr;
 }
 
 section,
@@ -415,7 +388,7 @@ h3 {
   font-size: 1em;
   padding: 1.5em 1em 1em 0.5em;
 }
- 
+
 article time {
   text-align: left;
   grid-column: 1/1;
@@ -477,22 +450,18 @@ section ul {
   gap: var(--line);
   width: 100%;
   max-width: 100%;
-  
 }
 
 section ul li {
- flex: 2 1 23%;
+  flex: 2 1 23%;
   background-color: var(--cbc);
   flex-grow: 1;
   width: 100%;
   padding: 0;
-  
-  
 }
 section ul li img {
-  
- width: 100%;
- height: 85%;
+  width: 100%;
+  height: 85%;
 }
 
 section ul li a {
@@ -504,18 +473,14 @@ section ul li a {
   flex-basis: auto;
   flex-direction: column;
   color: var(--hoofd);
-  
-  
-
 }
 
 section ul li a p {
   height: 15%;
   padding: 1em;
-  border-top: var(--hoofd) solid .1em;
+  border-top: var(--hoofd) solid 0.1em;
   margin: 0;
-font-size: 1rem;
-
+  font-size: 1rem;
 }
 /******ABOUT
 ******************************
@@ -545,7 +510,6 @@ section {
   grid-column: 1/4;
 }
 
-
 .about article img {
   margin: 0;
   grid-column: 1/3;
@@ -556,23 +520,22 @@ section {
   grid-row: 2/3;
   padding: 8em;
   margin: 0;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 2;
 }
 
-
-
-
 /***** CONTACT LAY OUT***********
 ************************************/
-.contact h1 { grid-column: 1/2;
-grid-row: 1/-1;
-object-fit: contain;}
+.contact h1 {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  object-fit: contain;
+}
 .contact {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-area: 2/2/-1/-1;
 }
-article > *{
+article > * {
   background-color: var(--cbc);
   gap: var(--line);
 }
@@ -609,7 +572,6 @@ article > *{
   padding: 3em;
   font-size: 1.5em;
   margin: 0;
-
 }
 
 /******
@@ -649,7 +611,7 @@ input[type="text"]:nth-last-of-type(2) {
 }
 input[type="submit"]:last-of-type {
   position: relative;
-  
+
   width: 5rem;
   height: 4rem;
   padding: 2.5rem 0 0;
@@ -671,7 +633,6 @@ form:focus {
 
 /*********ANIMATIE****/
 
-
 @keyframes lovelet-ani {
   0% {
     rotate: 0deg;
@@ -688,13 +649,13 @@ form:focus {
 
 @keyframes post-animation {
   0% {
-    scale: .8;
+    scale: 0.8;
     opacity: 40%;
     border: var(--hoofd);
     rotate: 5deg;
   }
   25% {
-    scale: .5;
+    scale: 0.5;
     opacity: 80%;
     border: var(--hoofd);
     rotate: -5deg;
@@ -704,14 +665,13 @@ form:focus {
     opacity: 100%;
     border: var(--hoofd);
     rotate: 0deg;
-    
   }
 
   100% {
     scale: 1.2;
     opacity: 100%;
     border: var(--hoofd);
-   rotate: 0deg;
+    rotate: 0deg;
   }
 }
 
@@ -719,7 +679,6 @@ input[type="submit"]:last-of-type:hover {
   animation-name: post-animation;
   animation-duration: 1s;
 }
-
 
 /****FOOTER ****/
 footer {
@@ -731,7 +690,7 @@ footer {
 
 footer ul {
   display: flex;
-padding: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -755,5 +714,3 @@ footer p {
   color: var(--hoofd);
   padding: 0 0 2em;
 }
-
-
