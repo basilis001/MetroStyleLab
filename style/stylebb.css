@@ -212,6 +212,11 @@ height: 120%;
 nav:first-of-type ul li.active a{
   color: var(--obc);
   
+  animation-duration: 3s;
+  animation-name: colourwo;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-timing-function: ease-in colour 1s;
  
 }
 
@@ -251,7 +256,7 @@ nav:first-of-type ul li:hover a {
 
 nav:first-of-type ul li.active::after {
   top: -1.2em;
-  left: 50%;
+  left: 60%;
   transform: translatex(100%);
   border-radius: 42px;
   width: 42px;
@@ -279,7 +284,7 @@ nav:first-of-type ul li:hover::after {
 }
 
 nav:first-of-type ul li.active::after {
-  animation-duration: 2ms;
+  animation-duration: 2s;
   animation-name: slide-twirl;
   animation-iteration-count: 1;
   animation-direction: reverse;
@@ -311,6 +316,22 @@ nav:first-of-type ul li.active::after {
   }
 }
 
+
+@keyframes colourwo {
+  from {
+  
+    
+  color: var(--obc);
+  }
+
+  50% {
+    
+    
+  }to {
+    color: var(--hoofd);
+    
+  }
+}
 /***HEADER********/
 body {
   background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
