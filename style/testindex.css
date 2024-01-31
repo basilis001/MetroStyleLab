@@ -53,7 +53,7 @@
 
 /* intro elements */
 main.start {
-  height: 125vh;
+  height: 115vh;
   background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
     url(/MetroStyleLab/img/0035SR.jpg);
   background-position: left top, center top, right top;
