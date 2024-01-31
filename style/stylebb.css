@@ -328,7 +328,7 @@ header {
   background-repeat: repeat-y;
   background-size: 33.33%;
   background-attachment: fixed;
-  border: 0.125em solid var(--accent);
+  border: 0.025em solid var(--accent);
   position: sticky;
   top: 0;
   justify-content: end;
