@@ -322,9 +322,9 @@ body {
 header {
   display: flex;
   height: max-content;
-  background-image: url(/MetroStyleLab/img/0021SR.jpeg),
+  background-image:
     url(/MetroStyleLab/img/0028SR.jpeg), url(/MetroStyleLab/img/0035SR.jpg);
-  background-position: left top, center top, right top;
+  background-position:  center top, right top;
   background-repeat: repeat-y;
   background-size: 33.33%;
   background-attachment: fixed;
@@ -343,7 +343,7 @@ header h1 {
   align-items: center;
   padding: 0 3rem;
   margin: 0;
-  min-width: 70vw;
+  min-width: 66vw;
   max-width: 33vw;
 
   justify-content: space-between;
