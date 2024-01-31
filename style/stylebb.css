@@ -39,7 +39,7 @@
     rgba(255, 11, 113, 1)
   );
   --border: 0.15em solid chartreuse;
-  --line: 0.155em;
+  --line: 0.1em;
 }
 *,
 *::after,
@@ -80,12 +80,13 @@ main section {
   grid-template-rows: auto 2fr 2fr;
   margin: 0;
   padding: 0 0 0 0 ;
+  z-index: 3;
 }
 /*tittle pagina links*****/
 main h1 {
   background-color: var(--cbc);
   margin:  0 ;
-  padding: .6em 1.5em 0 0.5em;
+  padding: .6em 1.5em 0 0.8em;
   font-weight: 200;
   grid-area: 1/ 1 / -1/ 2;
   font-weight: 300;
@@ -94,7 +95,7 @@ main h1 {
    position: sticky;
    top: 0;
    border: .08em var(--hoofd) solid;
-   z-index: 3;
+   z-index: 4;
 }
 
 
@@ -107,7 +108,7 @@ position: sticky;
   background-color: var(--cbc);
   margin: 0;
   border-top: .08em var(--hoofd) solid;
-
+z-index: 2;
 
   font-weight: 200;
   padding: .5em 1.5em .5em .5em;
@@ -139,7 +140,7 @@ li {
 }
 
 p {
-  font-size: 0.628rem;
+  font-size: 0.428rem;
   
   line-height: 1.8;
   text-align: left;
@@ -152,17 +153,26 @@ p {
   margin: var(--line) 0 ;
   grid-column: 1/-1;
 }
+
+
+
 /**************** NAVIGATIE*/
+
+
 main nav {
   position: fixed;
   bottom: 0;
-  z-index: 4;}
+  z-index: 5;
+height: 7%;}
+  
 
 main nav:first-of-type ul {
   display: flex;
   flex-flow: row nowrap;
   margin: 0;
   padding: 0;
+  z-index: 0;
+height: 100%;
 
 }
 
@@ -172,20 +182,37 @@ nav:first-of-type ul li {
   align-items: center;
   background-color: var(--obc);
   width: 31vw;
-  border: solid 0.025em var(--hoofd);
+  border: solid 0.08em var(--hoofd);
   position: relative;
-}
+height: 100%; 
 
+}
+nav:first-of-type ul li:not(:first-of-type) {
+background-color: #fffce872;
+font-size: 1em;
+  font-weight: 450;
+bottom: -1rem;
+
+
+}
 nav:first-of-type ul li a {
-  font-size: .8em;
+  font-size: .95em;
   padding-top: 0.5em;
   color: var(--hoofd);
 }
 
-nav:first-of-type ul li:first-child {
+nav:first-of-type ul li.active{
   width: 6.75vw;
-  font-size: 1em;
   
+  
+height: 120%;
+  
+ 
+}
+nav:first-of-type ul li.active a{
+  color: var(--obc);
+  
+ 
 }
 
 /*BOLLETJES NAV**********
@@ -202,7 +229,9 @@ nav:first-of-type ul li::after {
   background-clip: content-box;
   background-color: var(--hoofd);
   border-radius: 15px;
-  outline: 0.12em solid var(--hoofd);
+  outline: 0.12em solid var(--obc);
+  
+  z-index: 200;
 }
 
 /**HOVER NAV*************/
@@ -227,14 +256,69 @@ nav:first-of-type ul li.active::after {
   border-radius: 42px;
   width: 42px;
   height: 42px;
-  background-color: rgba(188, 22, 138, 0.529);
+  background-color: rgba(206, 20, 150, 0.768);
   z-index: 1;
   outline: 0.09em solid var(--hoofd);
-  border: 0.6em solid rgba(49, 255, 22, 0.641);
+  border: 0.6em solid rgba(91, 255, 54, 0.8);
 }
-/***HEADER********/
 
+nav:first-of-type ul li:hover::after {
+  position: absolute;
+  content: "";
+  top: -1.5em;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 25px;
+  height: 25px;
+  background-clip: content-box;
+  background-color: rgba(255, 192, 203, 0.428);
+  border-radius: 25px;
+  outline: 0.12em solid var(--accent);
+  
+  z-index: 200;
+}
+
+nav:first-of-type ul li.active::after {
+  animation-duration: 2ms;
+  animation-name: slide-twirl;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  transform: translatex(100%);
+  
+  background-color:rgba(91, 255, 54, 0.8);
+  z-index: 1;
+  outline: 0.1em solid var(--hoofd);
+  border: 0.7em solid  rgba(255, 192, 203, 0.555);
+}
+@keyframes slide-twirl {
+  from {
+  
+    
+  top: -1.2em;
+  left: 50%;
+  width: 45px;
+    height: 45px;
+    border-radius: 45px;
+  }
+
+  to {
+    top: -0.5em;
+    left: 300%;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: var(--hoofd);
+  }
+}
+
+/***HEADER********/
+body {
+  background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
+  url(/MetroStyleLab/img/0035SR.jpg);
+  background-size: 33.33%;
+}
 header {
+  display: flex;
   height: max-content;
   background-image: url(/MetroStyleLab/img/0021SR.jpeg), url(/MetroStyleLab/img/0028SR.jpeg),
   url(/MetroStyleLab/img/0035SR.jpg);
@@ -245,10 +329,10 @@ header {
   border: .025em solid var(--hoofd);
   position: sticky;
   top: 0;
+  justify-content:end;
+  padding: .25em ;
   
-  padding: .25em 6em;
-  
-z-index: 2;
+z-index: 4;
 }
 
 
@@ -257,10 +341,12 @@ header h1 {
   display: flex;
   flex-flow: row nowrap;
  align-items: center;
-  padding: 0 0 0 15rem;
+  padding: 0 3rem;
   margin: 0;
-  
+  min-width: 70vw;
+  max-width: 33vw;
 
+justify-content: space-between;
 
 }
 .tittleSwipe span:first-of-type a {
@@ -272,22 +358,25 @@ header h1 {
   color: var(--hoofd);
   font-size: 0.5em;
   letter-spacing: 2;
-  flex-grow: 3;
+  
+
 }
 
 .tittleSwipe span:nth-of-type(2) {
-  font-size: 0.28em;
+  font-size: 0.30em;
   font-weight: 500;
   letter-spacing: 5px;
-  padding: .5em 0;
+  
   margin: 0;
+  color: yellow;
+  
   
 }
 
 /*** CARD STYLING***************/
 .card {
   display: grid;
-  
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 2fr ;
 }
@@ -320,6 +409,8 @@ article time {
   grid-column: 1/2;
   grid-row: 2/5;
   object-fit: contain;
+  width: 100%;
+  height: auto;
 }
 
 .card p {
@@ -400,7 +491,7 @@ section ul li a {
 section ul li a p {
   height: 15%;
   padding: 1em;
-  border-top: var(--hoofd) solid .25em;
+  border-top: var(--hoofd) solid .1em;
   margin: 0;
 font-size: 1rem;
 
