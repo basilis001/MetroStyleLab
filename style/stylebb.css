@@ -47,6 +47,7 @@
   box-sizing: border-box;
 }
 
+*,
 body,
 html {
   margin: 0;
@@ -195,10 +196,11 @@ nav:first-of-type ul li:not(:first-of-type) {
   bottom: -1.2rem;
 }
 
-nav:first-of-type ul li a {
-  font-size: 0.95em;
-  padding-top: 0.55em;
+nav ul li a {
+  padding-top: 0.65em;
   color: var(--hoofd);
+  font-size: .9em;
+  font-weight: 550;
 }
 
 
